@@ -42,12 +42,23 @@ program bisec
    if (.not. (ex)) then
       print *, "sin exito"
    end if
+
 stop
 contains
 
    double precision function f(x)
       double precision :: n,x
-         f = x-((x)**2/120.0)-((x)**3/120.0)+(x**7)/5040.0
+         f = f1(x)
+   end function
+
+   double precision function f1(x)
+      double precision :: n,x
+         f1 = x-(x**2 / 120.0)-(x**3 / 120.0)+ (x ** 7 / 5040.0)
+   end function
+
+   double precision function f2(x)
+      double precision :: n,x
+         f2 = x-(x**2 / 120.0)-(x**3 / 120.0)+ (x ** 7 / 5040.0)
    end function
 
 end program
