@@ -20,6 +20,8 @@ program neville
       Q(i,0) = fi(i)
    end do
 
+   print *
+   print *
    !Salida:
    !  tabla de Q con P(x) = Qn,n
    !
@@ -34,8 +36,8 @@ program neville
       end do
       print *
    end do
+   print *
    !Salida Q
    Px = Q(n-1,n-1)
-
    print *, "P(x) =", Px
 end program
